@@ -133,4 +133,4 @@ exampleAddon.registerActionHandler("catalog", async (input, ctx) => {
 
 bootstrapEpg(epgSources);
 
-runCli([exampleAddon]);
+runCli([exampleAddon], { singleMode: false });
