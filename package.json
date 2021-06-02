@@ -1,0 +1,42 @@
+{
+  "name": "mediaurl-addon-iptv",
+  "version": "0.0.0",
+  "main": "dist",
+  "scripts": {
+    "build": "tsc",
+    "start": "node --max_old_space_size=1538 .",
+    "develop": "ts-node-dev --transpile-only src"
+  },
+  "dependencies": {
+    "@mediaurl/sdk": "^2.0.0-alpha.9",
+    "country-code-lookup": "^0.0.19",
+    "cuid": "^2.1.8",
+    "emoji-regex": "^8.0.0",
+    "lodash": "^4.17.21",
+    "node-fetch": "^2.6.1",
+    "rxjs": "^7.0.0",
+    "ts-is-present": "^1.2.1",
+    "xml2js": "^0.4.23"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.168",
+    "@types/node-fetch": "^2.5.10",
+    "@types/xml2js": "^0.4.8",
+    "lint-staged": "^10.5.4",
+    "prettier": "^2.2.1",
+    "simple-git-hooks": "^2.4.1",
+    "ts-node-dev": "^1.1.6",
+    "typescript": "^4.2.4"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,css,md}": [
+      "prettier --write"
+    ]
+  },
+  "engines": {
+    "node": "16.x"
+  }
+}
